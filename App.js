@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {FlatList,View, SafeAreaView,Image} from 'react-native';
+import {FlatList,View, SafeAreaView,Image,Dimensions, StatusBar} from 'react-native';
 import {DrawerNavigator,createDrawerNavigator,DrawerItems} from 'react-navigation';
 import Home from './app/views/Home';
 import Users from './app/views/Users';
@@ -20,10 +20,14 @@ import { ScrollView } from 'react-native-gesture-handler';
 //     );
 //   }
 //};
+const deviceWidth= Dimensions.get('window').width;
+const deviceHeight= Dimensions.get('window').height;
+const accentColor='#FFFFF';
+
 
 const CustomDrawerComponent= (props)=>(
     <SafeAreaView>
-      <View style={{height:130, padding:5  }}>
+      <View style={{height:135 , padding:5  }}>
           <Image source={require('./app/assets/icons/native_logo.png')} style={{height:120,width:120, alignSelf:'center'}} />
       </View>
       <ScrollView>

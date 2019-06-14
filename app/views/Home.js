@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, StatusBar } from 'react-native'
+import {Container,Header,Title,Body,} from 'native-base';
 
 export default class Home extends Component {
     render() {
         return (
-            <View style={styles.centerLayout}>
-                <Text>Welcome to the HomeComponent!</Text>
-            </View>
+            // <View style={styles.centerLayout}>
+            //     <Text>Welcome to the HomeComponent!</Text>
+            // </View>
+            <Container>
+                    <Header androidStatusBarColor="blue" style={{backgroundColor:'dodgerblue', height:50}} >
+                        <Body>
+                            <Title style={{color:"white", alignSelf:'center'}}>HOME</Title>
+                        </Body>
+                    </Header>
+                </Container>
+         
         )
     }
 }
